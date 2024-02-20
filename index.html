@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- fontawesome kit  -->
+
+    <script src="https://kit.fontawesome.com/65b6ddebc4.js" crossorigin="anonymous"></script>
+
+    <!-- tailwindcss and daisyUI link =============================================== -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-title-text': '#131318',
+                        'primary-sub-title-text': '#13131899',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        #buyTicket {
+            background: #ddd;
+        }
+
+        .bg-yellow {
+            background-color: yellow;
+        }
+
+        .seat {
+            background-color: #ddd;
+            padding: 10px 0px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .seat-row {
+            font-size: 16px;
+            padding: 5px;
+            margin-top: 34px;
+        }
+
+        .seat-row:first-child {
+            margin-top: 3px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrapper" class="">
+        <header>
+            <nav class="w-[1170px] mx-auto">
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                                <li><a>Home</a></li>
+                                <li><a>Services</a></li>
+                                <li><a>About Us</a></li>
+                                <li><a>Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <a class=" text-3xl font-bold text-[#1DD100]">Safe-Tripe</a>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                        <ul class="menu menu-horizontal px-1">
+                            <li><a>Home</a></li>
+                            <li><a>Services</a></li>
+                            <li><a>About Us</a></li>
+                            <li><a>Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-end">
+                        <a class="btn border-[#1DD100] text-[#1DD100]">Bus <img src="images/bus-icon.png" alt=""></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- bg-[url('/img/hero-pattern.svg') -->
+        <main>
+    
+            <!-- hero section  -->
+    
+            <div class="hero-wrapper w-[1170px]  mx-auto">
+                <div class=" relative">
+                    <div class="hero rounded-2xl bg-cover" style="background-image: url(images/banner.png);">
+                        <div class="hero-content text-center text-neutral-content">
+                            <div class="text-center py-[150px]">
+                                <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with </h1>
+                                <h1 class="mb-5 text-5xl font-bold text-[#1DD100]">Safe-Tripe</h1>
+                                <p class="mb-5 text-center max-w-md">Yes, you can run unit tests and view the results
+                                    directly within the app. The integrated testing features allow for a streamlined .</p>
+                                <button class="btn border-none bg-[#1DD100]"><a href="#buyTicket">Buy Tickets</a></button>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="flex flex-row justify-center gap-10 absolute top-[90%] left-[10%] right-[10%]">
+                            <div
+                                class="flex flex-row border-blue rounded-2xl bg-[#fff] inline-block p-5 border-b-4 border-[#1DD100]">
+                                <div>
+                                    <img src="images/people.png" alt="">
+                                </div>
+                                <div class="ml-1">
+                                    <p class="text-3xl font-bold">500K+</p>
+                                    <p>Registered users</p>
+                                </div>
+                            </div>
+    
+                            <div
+                                class="flex flex-row border-blue rounded-2xl bg-[#fff] inline-block p-5 border-b-4 border-[#1DD100]">
+                                <div>
+                                    <img src="images/ticket-cupon.png" alt="">
+                                </div>
+                                <div class="ml-1">
+                                    <p class="text-3xl font-bold">1.7 lacks</p>
+                                    <p>Tickets sold</p>
+                                </div>
+                            </div>
+    
+                            <div
+                                class="flex flex-row border-blue rounded-2xl bg-[#fff] inline-block p-5 border-b-4 border-[#1DD100]">
+                                <div>
+                                    <img src="images/stoppage.png" alt="">
+                                </div>
+                                <div class="ml-1">
+                                    <p class="text-3xl font-bold">80K+</p>
+                                    <p>Rental partners</p>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- offer section  -->
+                <div class="my-32">
+                    <h2 class="text-3xl text-center">Best offers for you</h2>
+                    <div class="flex flex-row justify-center gap-10 py-20">
+                        <div
+                            class="flex flex-row border-blue rounded-2xl inline-block bg-[#e7f33f] gap-10 justify-center items-center p-10">
+                            <div>
+                                <h3 class="text-3xl font-bold">15% OFF</h3>
+                                <p class="font-semibold">on your next purchase</p>
+                                <span> use by January 2024</span>
+                            </div>
+                            <div class="ml-1">
+                                <h3 class="text-xl font-bold">NEW15</h3>
+                                <p>Coupon Code</p>
+                            </div>
+                        </div>
+    
+                        <div
+                            class="flex flex-row border-blue rounded-2xl  inline-block bg-[#e29219] gap-10 justify-center items-center p-10">
+                            <div>
+                                <h3 class="text-3xl font-bold">20% OFF</h3>
+                                <p class="font-semibold">on your next purchase</p>
+                                <span> use by January 2024</span>
+                            </div>
+                            <div class="ml-1">
+                                <h3 class="text-xl font-bold">Couple20</h3>
+                                <p>Coupon Code</p>
+                            </div>
+                        </div>
+    
+    
+                    </div>
+                    <p class="text-center"><a href="#" class="text-center text-[#1DD100] border-2 py-2 px-5 rounded-md">See
+                            All Offer</a> </p>
+    
+    
+    
+                </div>
+    
+            </div>
+    
+            <!-- ticket book -->
+            <div id="buyTicket" class="w-[100%] rounded-t-3xl border-t-4 border-[#1DD100]">
+                <div class="ticket-wrapper pt-[100px]">
+                    <div class="title text-center w-[60%] mx-auto">
+                        <h1 class="text-5xl font-bold">Safe-tripe paribahon</h1>
+                        <p class="py-6 mb-10 w-[60%] mx-auto">Yes, you can run unit tests and view the results directly
+                            within the app. The integrated
+                            testing features allow for a streamlined</p>
+                    </div>
+                </div>
+    
+                <div class="w-[1170px] mx-auto  rounded-lg ">
+                    <div id="ticket-header" class="bg-[#fff] rounded-2xl">
+                        <div class="flex flex-row  items-center p-10">
+                            <div class="w-[80%]">
+                                <div>
+                                    <div class="flex flex-row justify-between items-center">
+                                        <div class="flex flex-row items-center mb-3">
+                                            <div>
+                                                <img src="images/bus-logo.png" alt="">
+                                            </div>
+                                            <div class="ml-2">
+                                                <p class="text-2xl font-bold">Greenline Paribahan</p>
+                                                <span>Coach-009-WEB ! AC_Business</span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <a href="#" class="bg-[#d6ecd3] text-[#1DD100] p-3 rounded-lg">
+                                                <img src="images/seat-green.png" alt="" class="inline-block">
+                                                <span class="text-2xl"><span class="seatRest1st">40</span> seats left</span>
+                                            </a>
+    
+                                        </div>
+                                    </div>
+    
+                                    <!-- bottom single element  -->
+                                    <div class="bg-[#acabab]  rounded-lg">
+                                        <div class="flex flex-row justify-between p-3">
+                                            <div class="">
+                                                <p>Route</p>
+                                            </div>
+                                            <div>
+                                                <p>Dhaka-Gopalganj</p>
+                                            </div>
+                                        </div>
+    
+                                        <hr style="border-top: 3px dashed #bbb">
+    
+                                        <div class="flex flex-row justify-between p-3">
+                                            <div class="">
+                                                <p>Departure time</p>
+                                            </div>
+                                            <div>
+                                                <p>6.00 am</p>
+                                            </div>
+                                        </div>
+    
+                                        <hr style="border-top: 3px dashed #bbb">
+    
+                                        <div class="flex flex-row justify-between p-3">
+                                            <div class="">
+                                                <p class="bg-[#ddd] p-3 rounded-lg">Boarding pint: Gulistan fulbaria</p>
+                                            </div>
+                                            <div>
+                                                <p class="bg-[#ddd] p-3 rounded-lg">Dropping point: BSMRSTU</p>
+                                            </div>
+                                            <div>
+                                                <p class="bg-[#ddd] p-3 rounded-lg">Estimated time: 9.00 am</p>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+    
+    
+    
+    
+                            </div>
+                            <div class="mx-auto">
+                                <img src="images/fare.png" alt="">
+                                <h3>550 taka</h3>
+                                <p>per seat</p>
+                            </div>
+                        </div>
+    
+                    </div>
+                   
+                    <!-- select your sit  -->
+                    <div class="w-[100%]  px-10 bg-[#fff] rounded-2xl mt-3">
+                        <div class="w-[64%] inline-block ">
+                            <h2 class="text-xl font-bold py-2">Select Your Seat</h2>
+                            <hr style="border-top: 1px dashed #bbb">
+                            <div class="flex flex-row justify-between py-2">
+                                <div>
+                                    <img src="images/seat-gray.png" alt="" class="inline-block">
+                                    <span> Available</span>
+                                </div>
+                                <div>
+                                    <img src="images/seat-green-filled.png" alt="" class="inline-block">
+                                    <span class="text-green-600">Selected</span>
+                                </div>
+                            </div>
+                            <hr style="border-top: 1px dashed #bbb">
+        
+                            <div class="flex flex-row justify-end">
+                                <div class="bg-[#ddd] rounded-lg p-3 my-3"><i class="fa-solid fa-dharmachakra text-2xl"></i>
+                                </div>
+                            </div>
+                            <!-- all bus seat  -->
+                            <div class="flex flex-row">
+                                <div class="inline-block w-[10%]">
+                                    <p class="seat-row">a</p>
+                                    <p class="seat-row">b</p>
+                                    <p class="seat-row">c</p>
+                                    <p class="seat-row">d</p>
+                                    <p class="seat-row">e</p>
+                                    <p class="seat-row">f</p>
+                                    <p class="seat-row">g</p>
+                                    <p class="seat-row">h</p>
+                                    <p class="seat-row">i</p>
+                                    <p class="seat-row">j</p>
+        
+                                </div>
+                                <div class="inline-block w-[90%]">
+                                    <div class="grid  grid-cols-4 grid-rows-10 gap-6">
+                                        <p id="A1" class="seat">A1</p>
+                                        <p id="A2" class="seat">A2</p>
+                                        <p id="A3" class="seat">A3</p>
+                                        <p id="A4" class="seat">A4</p>
+                                        <p id="B1" class="seat">B1</p>
+                                        <p id="B2" class="seat">B2</p>
+                                        <p id="B3" class="seat">B3</p>
+                                        <p id="B4" class="seat">B4</p>
+                                        <p id="C1" class="seat">C1</p>
+                                        <p id="C2" class="seat">C2</p>
+                                        <p id="C3" class="seat">C3</p>
+                                        <p id="C4" class="seat">C4</p>
+                                        <p id="D1" class="seat">D1</p>
+                                        <p id="D2" class="seat">D2</p>
+                                        <p id="D3" class="seat">D3</p>
+                                        <p id="D4" class="seat">D4</p>
+                                        <p id="E1" class="seat">E1</p>
+                                        <p id="E2" class="seat">E2</p>
+                                        <p id="E3" class="seat">E3</p>
+                                        <p id="E4" class="seat">E4</p>
+                                        <p id="F1" class="seat">F1</p>
+                                        <p id="F2" class="seat">F2</p>
+                                        <p id="F3" class="seat">F3</p>
+                                        <p id="F4" class="seat">F4</p>
+                                        <p id="G1" class="seat">G1</p>
+                                        <p id="G2" class="seat">G2</p>
+                                        <p id="G3" class="seat">G3</p>
+                                        <p id="G4" class="seat">G4</p>
+                                        <p id="H1" class="seat">H1</p>
+                                        <p id="H2" class="seat">H2</p>
+                                        <p id="H3" class="seat">H3</p>
+                                        <p id="H4" class="seat">H4</p>
+                                        <p id="I1" class="seat">I1</p>
+                                        <p id="I2" class="seat">I2</p>
+                                        <p id="I3" class="seat">I3</p>
+                                        <p id="I4" class="seat">I4</p>
+                                        <p id="J1" class="seat">J1</p>
+                                        <p id="J2" class="seat">J2</p>
+                                        <p id="J3" class="seat">J3</p>
+                                        <p id="J4" class="seat">J4</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-[33%] inline-block px-4">
+                            <h2 class="text-xl font-bold py-2">Select Your Seat</h2>
+                            <hr style="border-top: 1px dashed #bbb">
+                            <div class="bg-[#ddd] rounded-lg mt-3 p-3">
+                                <div class="flex flex-row justify-between ">
+                                    <div class="">
+                                        <p class="font-bold p-3 rounded-lg">Seats</p>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold p-3 rounded-lg">Class</p>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold p-3 rounded-lg">Price</p>
+                                    </div>
+                                </div>
+    
+                                <div class="border-t-4 border-b-4 " id="seat-booking-div">
+    
+                                    
+    
+                                    <!-- <div class="flex flex-row justify-between ">
+                                        <div class="">
+                                            <p class="font-semibold p-3 rounded-lg">A1</p>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold p-3 rounded-lg">Economic</p>
+                                        </div>
+                                        <div>
+                                            <p class="font-semibold p-3 rounded-lg">550</p>
+                                        </div>
+                                    </div> -->
+    
+                                </div>
+                                <!-- without coupon total price  -->
+                                <div class="flex flex-row justify-between ">
+                                    <div class="">
+                                        <p class="font-bold p-3 rounded-lg">Total Price</p>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold p-3 rounded-lg">BDT <span id="totalPrice">00</span></p>
+                                    </div>
+                                </div>
+                                <div class="p-3 relative">
+                                    <input id="coupon" type="text" id="coupon-input" class="bg-[#fff] p-2 w-full rounded-lg outline-none" placeholder="have you any coupon?">
+                                    <!-- <button  class="absolute right-[5%] bg-[#1DD100] p-2 rounded-lg text-[#fff]">apply</button> -->
+                                    <a id="apply" class="absolute right-[5%] bg-[#1DD100] p-2 rounded-lg text-[#fff]" href="#">Apply</a>
+                                </div>
+        
+                                <!-- Grand total price  -->
+                                <div class="flex flex-row justify-between ">
+                                    <div class="">
+                                        <p class="font-bold p-3 rounded-lg">Grand Total</p>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold p-3 rounded-lg">BDT <span id="grandTotal">00</span></p>
+                                    </div>
+                                </div>
+        
+        
+                            </div>
+        
+                            <!-- passanger info  -->
+                            <div class="mt-3">
+                                <h3 class="text-lg font-semibold">Passenger Name*</h3>
+                                <input type="text" class="border-2 border-slate-300 rounded-lg w-full p-2 outline-none" placeholder="enter your name">
+                                <h3 class="text-lg font-semibold" >Mobile Number*</h3>
+                                <input type="number"id="mbileNo" class="border-2 border-slate-300 rounded-lg w-full p-2 outline-none" placeholder="enter phone no">
+                                <h3 class="text-lg font-semibold">Email ID</h3>
+                                <input type="text" class="border-2 border-slate-300 rounded-lg w-full p-2 outline-none" placeholder="enter your email">
+                            </div>
+                            <button id="submit" class="w-full bg-[#1DD100] p-2 rounded-lg mt-3 text-[#fff]">submit</button>
+                            <div class="flex flex-row justify-around mt-3">
+                                <a href="#" class="underline">terms and condition</a>
+                                <a href="#" class="underline">cancelation policy</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+    
+    
+    
+            <!-- buyTicket -->
+        </main>
+    
+        <!-- footer  -->
+        <footer class="bg-[#000] text-[#fff] py-10">
+            <div class="w-[1170px] mx-auto">
+                <!-- upper part -->
+                <div class="flex flex-row justify-between">
+                    <div>
+                        <h2 class="text-3xl font-bold text-[#1DD100]">safe-tripe</h2>
+                        <p>Lets visit a clam & quit place <br> with safe and secure jurney with us.</p>
+                    </div>
+    
+                    <div class="text center">
+                        <h2>Download our app</h2>
+                        <a href="#"><img src="images/playstore.png" alt=""></a>
+                    </div>
+                </div>
+                 <hr class="border-b-1 my-10">
+                <!-- lower part -->
+                <div class="flex flex-row justify-between">
+                    <div>
+                        
+                        <p>@copyright reserved by safe-tripe @2024</p>
+                    </div>
+    
+                    <div>
+                        <a href="#">facebook</a>
+                        <a href="#">twitter</a>
+                        <a href="#">linkdin</a>
+                    </div>
+                </div>
+    
+            </div>
+        </footer>
+   </div>
+   <div id="model" class="hidden">
+    <div class="card w-[600px] bg-base-100 shadow-xl mx-auto my-[200px]">
+        <figure class="px-10 pt-10">
+          <img src="images/success.png" alt="Shoes" class="rounded-xl" />
+        </figure>
+        <div class="card-body items-center text-center">
+          <h2 class="card-title text-2xl text-green-600">SUCCESS</h2>
+          <p>Thank you very much for your booking seat with us.</p>
+          <span>we are shortly confirm your seat through an email</span>
+          <div class="card-actions">
+            <button class="btn btn-success text-white"><a href="index.html">Buy Now</a></button>
+          </div>
+        </div>
+      </div>
+   </div>
+   
+    
+  
+    <script>
+        document.getElementById('submit').addEventListener('click',function(){
+           
+
+            const mobileno = parseInt(document.getElementById('mbileNo').value.length);
+            if(mobileno == 11){
+                document.getElementById('wrapper').classList.add('hidden');
+                document.getElementById('model').classList.remove('hidden');
+            }
+        })
+
+        document.getElementById('apply').addEventListener('click',function(){
+            const couponText= document.getElementById('coupon').value.toLowerCase();
+
+        if(couponText=="new15"){
+            grandTotalprice=totalSeatPrice-((15*totalSeatPrice)/100);
+            document.getElementById("grandTotal").innerText = grandTotalprice;
+         }else if(couponText=="couple20"){
+            grandTotalprice=totalSeatPrice-((20*totalSeatPrice)/100);
+            document.getElementById("grandTotal").innerText = grandTotalprice;
+         }
+        })
+        // document.getElementById("totalPrice").innerText = totalSeatPrice;
+
+
+    </script>
+     <script src="myjs.js"></script>
+    <!-- <script src="custom.js"></script> -->
+    
+</body>
+
+
+</html>
