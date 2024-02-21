@@ -517,8 +517,11 @@
     <script>
 
         document.getElementById('mbileNo').addEventListener('keyup', function () {
-            document.getElementById('submit').classList.remove('hidden');
+
+            if(!isNaN(event.key)){
+                document.getElementById('submit').classList.remove('hidden');
             console.log(event.key);
+            }
         })
         document.getElementById('submit').addEventListener('click', function () {
 
