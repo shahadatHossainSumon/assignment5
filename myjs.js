@@ -69,5 +69,5 @@ document.addEventListener('click', function (event) {
 });
 
 function seatLimit(seatId) {
-    return Object.values(mySeats).reduce((acc, count) => acc + count, 0) >= 4 || mySeats[seatId] >= 2;
+    return Object.values(mySeats).reduce((myAcc, myScount) => myAcc + myScount, 0) >= 4 || mySeats[seatId] >= 2;
 }
