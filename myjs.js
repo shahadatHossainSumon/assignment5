@@ -19,13 +19,10 @@ document.addEventListener('click', function (event) {
             mySeats[myCid]++;
         }
 
-        // 3. Change background color of this id
+      
         event.target.style.backgroundColor = 'green';
 
-        // const sectionDress= document.createElement('div');
-        // sectionDress.innerHTML= myCid + " Seat is Booked";
-        // const parent = document.getElementById("seat-booking-div");
-        // parent.appendChild(sectionDress);
+       
 
         var htmlContent = `
         <div class="flex flex-row justify-between">

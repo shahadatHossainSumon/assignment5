@@ -401,7 +401,7 @@
 
                                 </div>
                                 <!-- without coupon total price  -->
-                                <div class="flex flex-row justify-between ">
+                                <div  class="flex flex-row justify-between ">
                                     <div class="">
                                         <p class="font-bold p-3 rounded-lg">Total Price</p>
                                     </div>
@@ -409,6 +409,7 @@
                                         <p class="font-bold p-3 rounded-lg">BDT <span id="totalPrice">00</span></p>
                                     </div>
                                 </div>
+                                <div id="without-coupon"></div>
                                 <div class="p-3 relative">
                                     <input id="coupon" type="text" id="coupon-input"
                                         class="bg-[#fff] p-2 w-full rounded-lg outline-none"
@@ -541,11 +542,15 @@
 
 
             if (couponText == "new15") {
-                grandTotalprice = totalSeatPrice - ((15 * totalSeatPrice) / 100);
+                let discountPrice=(15 * totalSeatPrice) / 100;
+                grandTotalprice = totalSeatPrice - discountPrice;
                 document.getElementById("grandTotal").innerText = grandTotalprice;
+                document.getElementById("without-coupon").innerHTML=`<p class="px-3 text-[#e74c3c]">Your are saving  ${discountPrice} BDT</p>`;
             } else if (couponText == "couple20") {
-                grandTotalprice = totalSeatPrice - ((20 * totalSeatPrice) / 100);
+                let discountPrice=(20 * totalSeatPrice) / 100;
+                grandTotalprice = totalSeatPrice - discountPrice;
                 document.getElementById("grandTotal").innerText = grandTotalprice;
+                document.getElementById("without-coupon").innerHTML=`<p class="px-3 text-[#e74c3c]">Your are saving  ${discountPrice} BDT</p>`;
             }
         })
 
